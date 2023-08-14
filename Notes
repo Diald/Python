@@ -1,0 +1,369 @@
+Rules for writting a variable- 
+1. The variable should only contain letters, numbers and underscores 
+
+2. The variable should only start with letters and underscores, it should not start with numbers
+
+3. The variable should not contain any white spaces 
+
+4. Make sure the variable should not be any keyword or function name. 
+
+STRINGS- 
+Strings are a series of characters within a double or single commas. 
+
+CHANGING CASE IN STRINGS- 
+s.lower()
+s.upper()
+s.title()
+s.swapcase()
+
+for printing strings we use f strings or format string as they format variable names into their values. they are better than using simple print function 
+
+DATA TYPES- 
+1. NUMBERS- 
+python supports BODMAS rule for multiple operators. For Example- 
+2+3*4 = 14
+
+2. FLOAT - 
+python calls any decimal number as float. 
+For Example- 
+0.1 + 0.1 = 0.2
+
+Operations between integer and floats- 
+
+4/2 = 2.0 (fraction)
+4//2= 2 (without decimal)
+4%2 = 0 (remainder)
+1 + 0.2 = 1.2 
+(addition of integer and float) 
+2* 0.3 = 0.6 
+(multiplication of integer and float) 
+3.0 ** 2= 9.0 
+(square of integer and float) 
+
+PYTHON IGNORES UNDERSCORES - 
+
+print(14_000_000_000) 
+
+output>> 14000000000
+
+MULTIPLE ASSIGNMENT - 
+
+x,y,z= 0,2,0
+ 
+python will assign each value to it respectively positions 
+
+COMMENTS - 
+# indicates a comment in python or ''' also indicates multiline comments 
+
+
+LISTS - 
+list is a collection of items in a particular order. in python square brackets [] indicates a list and each item in list is seperated by a comma 
+Example- colors = ['red','blue','green','violet','pink']
+
+ACESSING ELEMENTS IN STRINGS- 
+we access elements in string using index numbers like 
+colors = ['red','blue','green','violet','pink']
+print(colors[0])
+print(colors[1])
+print(colors[2])
+print(colors[3])
+print(colors[4])
+
+>>red 
+blue
+green
+violet
+pink 
+
+there are 2 syntax for indexes one start from 0 to n and other starts from -1 to -n 
+0,1,2,3,4,5,6,7... 
+-1,-2,-3,-4,-5,-6,-7...
+ 
+where -1 is the last element 
+colors = ['red','blue','green','violet','pink']
+
+here colors[-1] is pink and colors[-2] is violet 
+
+CHANGING ELEMENTS FROM LIST - 
+
+colors = ['red','blue','green','violet','pink']
+colors[1]= "indigo"
+print(colors)  
+
+>>['red','blue','green','violet','pink']
+
+ADDING ELEMENTS TO A LIST - 
+colors = ['red','blue','green','violet','pink']
+colors.append('black')
+print(colors) 
+
+>>['red','blue','green','violet','pink','black']
+
+append always adds element to the end of list 
+
+INSERTING ELEMENTS TO A LIST- 
+
+.append() always adds element to the end while .insert() allows you to change with the desired index number- 
+
+colors = ['red','blue','green','violet','pink']
+colors.insert(3,'white') 
+print(colors) 
+
+>>['red','blue','green','white','violet','pink']
+
+the 3rd index already exist so it will become 4th index 
+
+REMOVING ELEMENTS FROM LIST- 
+
+using del statement we could delete an element from list. Example- 
+
+colors = ['red','blue','green','violet','pink']
+del colors[3] 
+print(colors) 
+
+>>['red','blue','green','pink']
+
+(b) using pop() method- 
+pop() method lets you store the popped element too. its a very good advantage!but it removes just the last element.
+For Example- 
+
+colors = ['red','blue','green','violet','pink']
+popped= colors.pop()
+print(colors)
+print(popped)
+
+>>['red','blue','green','violet']
+pink
+
+by default pop() removes element from end but we can remove by a specific index number. 
+
+colors = ['red','blue','green','violet','pink']
+popped= colors.pop(1) 
+print(colors) 
+
+>>['red','green','violet','pink']
+
+ADDING- .append(i)
+        .insert(i,list)
+DELETING/ REMOVING- del
+                    pop(i)
+
+REMOVING ITEM BY VALUE- (.remove())
+For Example- 
+
+colors = ['red','blue','green','violet','pink']
+colours.remove('green')
+print(colors) 
+
+>>['red','blue','violet','pink']
+
+EXAMPLE- 
+colors = ['red','blue','green','violet','pink']
+favorite= 'blue'
+print("my favorite color is", favorite)
+
+>> my favorite color is blue 
+
+SORTING THE LISTS- 
+
+1. Sorting list permanently with sort() method- 
+colors = ['red','blue','green','violet','pink']
+colors.sort()
+print(colors)
+
+>> ['blue','green','pink','red','violet']
+
+sort() always sort lists in alphabetical order and to get reverse alphabetical order- 
+
+colors.sort(reverse=True) 
+
+and remember in python true always have capital T, but in C++ true is t small letter only 
+
+REVERSING A LIST- 
+
+colors = ['red','blue','green','violet','pink']
+colors.reverse()
+print(colors)
+
+>>['pink','violet','green','blue','red']
+
+it doesnt sort reverse alphabetically, it just simply reverses the list
+
+
+FINDING LENGTH OF LIST- 
+colors = ['red','blue','green','violet','pink']
+print(len(colors))
+
+>>5
+
+ITERATE THROUGH LIST- 
+
+colors = ['red','blue','green','violet','pink']
+for color in colors:
+print(color)
+
+>>red
+blue
+green
+violet
+pink
+
+DOING SOMETHING AFTER THE LIST- 
+
+colors = ['red','blue','green','violet','pink']
+for color in colors: 
+print("we have the color",color)
+print("Thank you everybody")
+
+>>
+we have the color  red
+we have the color  blue
+we have the color  green
+we have the color  violet
+we have the color  pink
+Thank you everybody
+
+FOR LOOP- 
+
+for loop always run within a certain range or within some values  like 
+
+for i in range(1,5):
+print(value)
+
+>>1
+2
+3
+4
+5
+
+STATISTICS WITH LIST OF NUMBERS
+
+digits= [1,2,3,4,5,6,7,8,9,10]
+min(digits)
+>> 1
+max(digits)
+>>10
+sum(digits)
+>> 55
+
+LIST COMPREHENSION 
+
+list comprehension allows you to generate same list with few lines
+EXAMPLE- 
+sqaures= [value**2 for value in range(1,11)]
+print(squares)
+
+>>[1,4,9,16,25,36,49,64,81,100]
+
+
+LIST SLICING - 
+
+names= ['ram','shyam','sita','laxman','om']
+
+print(names[0:3])
+>> ['ram','shyam','sita']
+
+print(names[-3:])
+>> ['om','laxman','sita']
+
+COPYING A LIST- 
+by simply putting equal to sign. For example i want to copy list_1 into list_2 
+we do list_2 = list_1[:]
+
+list_1 = [3,6,9,12,15]
+list_2 = list_1[:]
+print(list_2) 
+
+>> [3,6,9,12,15]
+
+but if you put list_2 = list_1 then its error, always put [:]
+
+
+<!--TUPLES--->
+
+Tuples store items of different data types but are immutable in nature 
+elements of tuples are ordered and within the paranthesis () curved brackets 
+
+for example- 
+
+digits= (350,150)
+print(digits[0])
+print(digits[1])
+
+>>350 
+150 
+
+tuples are immutable that is we can not add elements to it like we did in list 
+like in list we could do 
+
+digits= [10,20,30]
+digits[0]= 40
+print(digits) 
+
+>> [40,20,30]
+
+but in tuples- 
+
+digits= (10,20,30)
+digits[0] = 40 
+print(digits) 
+
+>> error 
+
+because tuples are immutable 
+
+IF YOU WANT TO HAVE JUST 1 ELEMENT IN TUPLE ADD COMMAS 
+
+digits = (3,)
+print(digits[0])
+
+>> 3
+
+but if we do 
+
+digits = (3) 
+print(digits[0])
+
+>> error 
+
+to loop through all elements or iterate through all elements in tuple- 
+
+digits = (10,20)
+for digit in digits:
+print(digit)
+
+>> 10 
+20 
+
+we can not change the tuple but we can change by re introducing it like- 
+
+digits = (10,20)
+print(digits) 
+digits = (30,20)
+print(digits) 
+
+>> 10
+20 
+30
+20
+
+EQUALITY 
+there are 2 types of equalities = and == and they have different meanings 
+
+if we say 
+color[0]= 'yellow'
+ 
+we are trying to change 0 indexed element to yellow 
+but if we say 
+
+color[0]=='yellow'
+
+it return True if 0 indexed is actually yellow 
+
+thus == always return either True or False
+
+INEQUALITY (!=)
+
+TO CHECK MULTIPLE CONDITIONS - 
+1. and 
+2. or 
