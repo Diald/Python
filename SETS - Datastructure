@@ -1,0 +1,76 @@
+Sets- 
+
+Sets are one of 4 built in datatypes in python. The other 3 datatypes are list, tuple and dictionaries. 
+
+A set is a collection of unordered, unchangeable and unindexed
+ 
+PROPERTIES OF SET- 
+
+1. unordered 
+2. immutable 
+3. unindexed 
+4. Duplicates not allowed 
+5. set can have different Datatypes
+
+syntax of sets are- 
+{"apple","bannana","cherry"}
+
+since sets are not ordered, when you print a set you wont know which element would come first. In sets True and 1 are considered as same values. 
+
+FUNCTIONS IN SET- 
+
+1. len(set_1)
+2. type(set_1)
+3. x = set(arr)
+
+len(set_1) gives you the length of the set 
+type(set_1) will give you what type of datatypes are in the set
+set(arr) is used to convert any datatype into set
+
+ACCESS ELEMENTS IN SET- 
+sets are unordered but we can iterate through each of its element by- 
+
+for x in set_1:
+print(x)
+
+ADD ITEMS - 
+
+like in lists we used .append here we use .add and .update 
+.add - is used to add elements to set
+.update is used to add 2 sets or any other data structure like list,tuples,etc
+
+set_1.add("orange")
+set_1.update(set_2)
+set_1.update(list_1)
+
+REMOVE ITEMS- 
+
+1. set_1.remove("banana")
+2. set_1.discard("banana")
+3. set_1.pop()
+4. set_1.clear() [empties the entire set]
+5. del set_1
+
+JOIN TWO SETS- 
+
+1. x = set_1.union(set_2)
+2. set_1.update(set_2)
+
+INTERSECTIONS- 
+ 
+1. to keep items that are BOTH in set x and y without declaring a new set
+
+x.intersection_update(y)
+
+2. to keep items that are BOTH in set x and y by declaring another new set- 
+
+z = x.intersection(y)
+
+KEEP ALL BUT NOT DUPLICATES- 
+
+x= {1,2,3}
+y= {4,5,1}
+
+x.symmetric_difference_update(y)
+
+it also doesnt require a new set declaration 
