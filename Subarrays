@@ -1,0 +1,7 @@
+'''arr=[1,2,3,7,5]'''
+#code for subarrays
+for i in range(0,len(arr)-1):
+    current=[]
+    for j in range(i,len(arr)-1):
+        current.append(arr[j])
+        print(current)
