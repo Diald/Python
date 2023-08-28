@@ -74,3 +74,17 @@ y= {4,5,1}
 x.symmetric_difference_update(y)
 
 it also doesnt require a new set declaration 
+!-----ALSO ---!
+union of sets- 
+dayA= set(['Mon','Tue','Wed','Thur'])
+dayB= set(['Wed','Thur','Fri','Sat','Sun'])
+alldays= dayA | dayB
+print(alldays) 
+
+intersection of sets- 
+
+days = dayA & dayB 
+
+Difference of sets - 
+
+days = dayA - dayB 
